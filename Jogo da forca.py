@@ -26,7 +26,8 @@ def adivinhar():
         if letra not in palavra_secreta:
             tentativas_restantes -= 1
         atualizar_display()
-
+    else :
+        display_tentativas.set(f"Você já escolheu essa letra: {letras_adivinhadas} e você tem {tentativas_restantes},tentativas restantes ")
     if set(palavra_secreta).issubset(letras_adivinhadas):
         display_palavra.set(f"Você ganhou! A palavra era: {palavra_secreta}")
 
